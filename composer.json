@@ -1,0 +1,31 @@
+{
+  "name": "mainlycode/broadway-rethinkdb",
+  "description": "RethinkDB support for Broadway",
+  "require": {
+    "broadway/broadway": "^0.9.0@dev",
+    "danielmewes/php-rql": "^2.2"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "~5.1"
+  },
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "othillo",
+      "email": "othillo@othillo.nl"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "MainlyCode\\BroadwayRethinkDb\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "MainlyCode\\BroadwayRethinkDb\\": "test/"
+    },
+    "psr-0": {
+      "Broadway\\": "vendor/broadway/broadway/test/"
+    }
+  }
+}
