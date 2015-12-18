@@ -1,0 +1,27 @@
+language: php
+
+matrix:
+  include:
+    - php: 5.5
+    - php: 5.6
+    - php: 7
+
+before_install:
+  - composer self-update
+  - sudo add-apt-repository ppa:rethinkdb/ppa -y
+  - sudo apt-get update -qq
+  - sudo apt-get install rethinkdb -y
+
+install:
+  - composer install
+
+before_script:
+  - rethinkdb --daemon
+
+script:
+  - ./vendor/bin/phpunit --exclude-group=none
+
+branches:
+  only:
+    - master
+    - develop
