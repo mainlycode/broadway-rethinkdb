@@ -27,5 +27,10 @@
     "psr-0": {
       "Broadway\\": "vendor/broadway/broadway/test/"
     }
+  },
+  "extra": {
+    "branch-alias": {
+      "dev-master": "0.2.x-dev"
+    }
   }
 }
